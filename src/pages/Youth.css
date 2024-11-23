@@ -1,0 +1,87 @@
+.products-container {
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 produits par ligne */
+  gap: 20px;
+  justify-items: center;
+}
+
+.product-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 100%;
+  max-width: 250px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  height: 350px;
+  display: block;
+  text-decoration: none;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #eee;
+}
+
+.product-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.product-price {
+  font-size: 1rem;
+  color: #333;
+}
+
+.product-card h2 {
+  font-size: 1.1rem;
+  margin-top: 15px;
+}
+
+.product-card p {
+  font-size: 0.9rem;
+  color: #666;
+  padding: 5px 0;
+}
+
+.pagination {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.page-button {
+  width: 50px;
+  padding: 10px 15px;
+  margin: 0 5px;
+  border: 1px solid #ddd;
+  background-color: #007bff;
+  color: #000000;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.page-button.active {
+  background-color: #007bff;
+  color: #007bff;
+}
+
+.page-button:hover {
+  background-color: #a1470b;
+  color: #000000;
+}

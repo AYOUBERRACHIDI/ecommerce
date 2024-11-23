@@ -1,0 +1,338 @@
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+/* Conteneur principal des détails du produit */
+.product-details-container {
+  display: flex;
+  align-items: center; /* Centre verticalement */
+  justify-content: center; /* Centre horizontalement */
+  flex-wrap: wrap; /* Permet le wrap sur les petits écrans */
+  padding: 20px;
+  max-width: 1200px;
+  margin: 20px auto;
+  background-color: #f5f5f5;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Section de l'image */
+.product-image {
+  flex: 1;
+  text-align: center;
+  margin: 20px;
+}
+
+.product-image img {
+  width: 80%; /* Adapte la taille à l'espace */
+  max-width: 600px;
+  height: auto;
+  border-radius: 10px;
+  
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Section des informations du produit */
+.product-info {
+  flex: 1;
+  margin: 20px;
+  text-align: left;
+  font-family: 'Arial', sans-serif;
+}
+
+.product-info h1 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.product-info p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Options du produit */
+.product-options {
+  margin: 20px 0;
+  text-align: left;
+}
+
+
+/* Sélection de taille (boutons en grille de 3 par ligne) */
+.size-selection {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colonnes */
+  gap: 5px; /* Espacement entre les boutons */
+  margin-bottom: 15px;
+}
+
+.size-selection p {
+  grid-column: span 3; /* Le titre occupe toute la ligne au-dessus des boutons */
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.size-selection button {
+  background-color: #060606;
+  color: white;
+  width: 80%; /* Prend toute la largeur de sa colonne */
+  height: 40px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  
+}
+
+.size-selection button.selected {
+  background-color: #008cba;
+}
+
+.size-selection button:hover {
+  background-color: orange;
+}
+
+.size-selection button.selected {
+  background-color: #008cba;
+  color: white;
+}
+  
+  .action-buttons {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+  }
+  
+  .add-to-cart-btn, .buy-now-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    margin-right: 10px;
+    height: 60px;
+    width: 200px;
+    margin-top: 19px;
+  }
+  
+  .add-to-cart-btn {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .add-to-cart-btn:hover {
+    background-color: #45a049;
+  }
+  /* Style pour le message d'ajout au panier */
+.add-to-cart-message {
+    background-color: #008CBA; /* Bleu clair */
+    color: white;
+    font-size: 18px;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    transition: opacity 0.5s ease;
+    margin-top: 50px; /* Espacement du haut */
+  }
+  
+  .confirmation-message {
+    background-color: #0ba508; /* Vert de confirmation */
+    color: white;
+    font-size: 18px;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    transition: opacity 0.5s ease;
+  }
+  
+  
+  .buy-now-btn {
+    background-color: #008cba;
+    color: white;
+  }
+  
+  .buy-now-btn:hover {
+    background-color: #007bb5;
+  }
+  
+  /* Stylisation des couleurs de produit à gauche */
+  .product-colors {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+  
+  .product-color {
+    width: 20px;
+    height: 20px;
+    margin-bottom: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .color-blue {
+    background-color: #3498db;
+  }
+  
+  .color-red {
+    background-color: #e74c3c;
+  }
+  
+  .color-yellow {
+    background-color: #f1c40f;
+  }
+  
+  /* Disponibilité */
+  .availability {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  
+  .availability span {
+    margin-left: 5px;
+    color: #27ae60;
+  }
+  
+
+
+  
+/* Styles pour le modal */
+.modal {
+    position: fixed; /* Fixe le modal à la fenêtre */
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Pour s'assurer que le modal soit au-dessus */
+  }
+  
+  /* Styles pour le contenu du modal */
+  .modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    width: 400px;
+    max-width: 90%;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3); /* Ombre stylisée */
+    position: relative; /* Pour positionner la croix de fermeture */
+    text-align: center;
+    animation: slide-down 0.3s ease-out; /* Animation d'apparition */
+  }
+  
+  /* Animation d'apparition du modal */
+  @keyframes slide-down {
+    from {
+      transform: translateY(-200px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Croix de fermeture */
+  .close-modal-btn {
+    position: absolute;
+    right: 10px;
+    border: none;
+    cursor: pointer;
+    color: #ffffff;
+    transition: color 0.3s ease;
+    width: 100px;
+  }
+  
+  .close-modal-btn:hover {
+    color: #ffffff; /* Survol de la croix */
+  }
+  
+  /* Styles des champs de formulaire dans le modal */
+  .modal-content input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+  }
+  
+  .modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .modal-buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .confirm-purchase-btn {
+    background-color: #0ba508;
+    color: white;
+    width: 150px;
+  }
+  
+  .confirm-purchase-btn:hover {
+    background-color: #2b5ab1;
+  }
+  
+  /* Style pour le message de confirmation d'achat */
+.purchase-message {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #28a745;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+    text-align: center;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .purchase-message p {
+    margin: 0;
+  }
+  .confirmation-message {
+    background-color: #0ba508; /* Vert de confirmation */
+    color: white;
+    font-size: 18px;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    top: 90px;
+    left: 0;
+    z-index: 999; /* Assurez-vous que le message soit bien visible */
+    transition: opacity 0.5s ease;
+  }
+    

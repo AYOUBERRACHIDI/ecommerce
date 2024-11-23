@@ -1,0 +1,75 @@
+/* Banner.css */
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 455px;
+  overflow: hidden;
+  margin-bottom: 5px;
+  margin-left: 10px;
+  cursor: pointer; /* Ajout du curseur pour indiquer que l'utilisateur peut cliquer */
+  border-radius: 20px; /* Bordure arrondie pour une apparence moderne */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Ombre douce pour l'effet de flottement */
+}
+
+.banner-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* La vidéo s'ajuste comme une image de fond */
+  z-index: -1; /* Assurez-vous que la vidéo soit derrière le texte et le bouton */
+}
+
+.banner-text {
+  position: absolute;
+  top: 40%;
+  left: 5%; /* Déplacer le texte à gauche */
+  transform: translateY(-50%); /* Centrer verticalement */
+  color: white;
+  text-align: left; /* Alignement du texte à gauche */
+  font-family: Arial, sans-serif;
+  z-index: 1; /* Assurez-vous que le texte soit au-dessus de la vidéo */
+}
+
+.banner-text h1 {
+  font-size: 2.8em; /* Augmenter la taille pour plus de visibilité */
+  margin: 0;
+  font-weight: bold;
+  line-height: 1.2; /* Ajuster l'interligne pour une meilleure lisibilité */
+  color: white;
+}
+
+.banner-text p {
+  font-size: 1.3em; /* Agrandir légèrement la description */
+  margin-top: 10px;
+  font-weight: 400;
+  color: white;
+}
+
+/* Style pour le bouton "Acheter maintenant" */
+.shop-now-button {
+  background: linear-gradient(45deg, #ff6f00, #ff9e00); /* Dégradé de couleurs vibrantes (jaune-orange) */
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  font-size: 1.3em;
+  font-weight: 600;
+  width: 300px;
+  cursor: pointer;
+  border-radius: 30px; /* Bordure arrondie pour un aspect moderne */
+  position: absolute;
+  left: 5%; /* Aligner le bouton à gauche sous le texte */
+  top: 70%; /* Le bouton sera sous le texte */
+  transform: translateY(0); /* Garder la position du bouton fixe */
+  opacity: 1;
+  visibility: visible;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Effet de transition fluide */
+}
+
+.shop-now-button:hover {
+  background: linear-gradient(45deg, #ff9e00, #ff6f00); /* Inverser le dégradé pour l'effet de survol */
+  transform: scale(1.05); /* Agrandissement doux au survol */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Ombre plus marquée au survol */
+}

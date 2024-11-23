@@ -1,0 +1,34 @@
+/* NavbarSecondary.css */
+.navbar-secondary {
+  display: flex;
+  justify-content: flex-end; /* Pousse les liens vers la droite */
+  background-color: #f8f8f8;
+  padding: 10px 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-right: 37px;
+  margin-left: 30px;
+}
+
+.navbar-secondary a {
+  color: #4e4e4e;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  margin-left: 20px; /* Espacement entre les liens */
+}
+
+.navbar-secondary a:hover {
+  color: #ff5722;
+}
+
+/* Masquer la navbar secondaire sur les petits écrans */
+.navbar-secondary-container {
+  display: block; /* Afficher normalement sur les grands écrans */
+}
+
+@media (max-width: 768px) {
+  /* Masquer NavbarSecondary sur les petits écrans */
+  .navbar-secondary-container {
+      display: none;
+  }
+}

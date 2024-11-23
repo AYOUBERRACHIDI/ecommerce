@@ -1,0 +1,95 @@
+/* Signup.css */
+
+.auth-form {
+    width: 100%;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrer les éléments horizontalement */
+  }
+  
+  h2 {
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  input {
+    width: 100%;
+    max-width: 350px; /* Limiter la largeur des inputs */
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  
+  input:focus {
+    border-color: #5c67f2;
+    box-shadow: 0 0 8px rgba(92, 103, 242, 0.5);
+  }
+  
+  button {
+    width: 380px;
+    max-width: 500px; /* Limiter la largeur du bouton */
+    padding: 12px;
+    background-color: #5c67f2;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+  }
+  
+  button:hover {
+    background-color: #4a54e1;
+    transform: scale(1.05);
+  }
+  
+  button:active {
+    transform: scale(1);
+  }
+  
+  .error {
+    color: #e74c3c;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  p a {
+    color: #5c67f2;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  p a:hover {
+    color: #3e4bce;
+    text-decoration: underline;
+  }
+  
+  /* Styles pour le responsive */
+  @media (max-width: 500px) {
+    .auth-form {
+      padding: 20px;
+    }
+    h2 {
+      font-size: 22px;
+    }
+  }
+  

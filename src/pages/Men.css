@@ -1,0 +1,71 @@
+.product-card-link1 {
+  text-decoration: none; /* Supprime la sous-ligne du lien */
+  color: #000000; /* Changer la couleur du lien */
+  
+}
+
+
+
+.product-card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  display: block; /* Assure que le lien occupe toute la carte */
+  height: 450px;
+  position: relative; /* Positionner le lien de manière absolue dans la carte */
+  padding-right: 35px;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.product-card h3 {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.product-card p {
+  font-weight: bold;
+  color: #444;
+  
+}
+
+
+
+
+.pagination {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.page-button {
+  width: 50px;
+  padding: 10px 15px;
+  margin: 0 5px;
+  border: 1px solid #ddd;
+  background-color: #000000;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.page-button.active {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+.page-button:hover {
+  background-color: #ffffff;
+  color: #000000;
+}

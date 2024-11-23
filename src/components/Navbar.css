@@ -1,0 +1,234 @@
+/* Style de base pour la navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 15px 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo-home {
+  display: flex;
+  align-items: center;
+  color: #4e4e4e;
+  text-decoration: none;
+  font-size: 1.4em;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.logo-home:hover {
+  color: #ff5722;
+}
+
+.logo {
+  width: 50px;
+  height: auto;
+  margin-right: 12px;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.icon {
+  width: 28px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+.search-input {
+  padding: 8px;
+  margin-left: 8px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: width 0.3s ease, opacity 0.3s ease;
+  width: 0;
+  opacity: 0;
+  background-color: #fafafa;
+  color: #4e4e4e;
+}
+
+.search-input:focus,
+.search-container .search-input {
+  width: 180px;
+  opacity: 1;
+}
+
+.nav-links-desktop {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-right a {
+  color: #4e4e4e;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1em;
+  transition: color 0.3s ease;
+}
+
+.navbar-right a:hover {
+  color: #ff5722;
+}
+
+.social-icons-desktop {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icon {
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 2px 8px rgba(255, 87, 34, 0.2);
+}
+
+/* Menu mobile (petits écrans) */
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.menu-line {
+  width: 25px;
+  height: 3px;
+  background-color: #4e4e4e;
+}
+
+.mobile-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #fff;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+}
+
+.mobile-menu a {
+  color: #4e4e4e;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.mobile-menu a:hover {
+  color: #ff5722;
+}
+
+/* Mobile logout button */
+.mobile-logout-button {
+  background-color: #ff5722;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  align-self: center; /* Centrer le bouton sur les petits écrans */
+  width: 80%; /* Le bouton prend 80% de la largeur du menu mobile */
+  max-width: 250px; /* Limiter la largeur maximale du bouton */
+  margin-top: 15px; /* Ajouter un peu d'espace au-dessus */
+}
+
+.mobile-logout-button:hover {
+  background-color: #e64a19;
+}
+
+/* Responsive styles */
+
+/* Petits écrans (jusqu'à 768px) */
+@media (max-width: 768px) {
+  .nav-links-desktop,
+  .social-icons-desktop {
+    display: none; /* Masquer les liens de navigation et icônes sociales sur petits écrans */
+  }
+
+  .menu-icon {
+    display: flex; /* Afficher le menu hamburguer sur petits écrans */
+  }
+
+  .search-input:focus {
+    width: 100%; /* La barre de recherche prend 100% de la largeur sur petits écrans */
+  }
+  
+  /* Ajout de styles pour la disposition du bouton logout */
+  .mobile-logout-button {
+    margin-left: 0; /* Enlever la marge gauche fixe */
+    align-self: center; /* Centrer le bouton */
+    width: 80%; /* Rendre le bouton responsive */
+    max-width: 250px; /* Limiter sa largeur */
+  }
+}
+
+/* Styles pour les liens de genre sur grands écrans */
+.navbar-center {
+  display: flex;
+  gap: 15px;
+}
+
+.gender-link {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px 10px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+.gender-link:hover {
+  color: white;
+  background-color: black;
+}
+
+/* Cacher les liens de genre sur petits écrans */
+@media (max-width: 768px) {
+  .navbar-center {
+    display: none;
+  }
+}
+
+/* Si vous voulez afficher les liens de genre dans le menu mobile sur petits écrans */
+.mobile-menu .gender-link {
+  display: block;
+  padding: 8px 0;
+  color: black;
+  font-size: 16px;
+  text-align: left;
+}
+
+.mobile-menu .gender-link:hover {
+  background-color: #f0f0f0;
+}
